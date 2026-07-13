@@ -1,0 +1,46 @@
+class Vehicle:
+    def __init__(self, brand, model):
+
+        self.brand = brand
+        self.model = model
+
+    def display(self):
+        print("Brand:", self.brand)
+
+        print("Model:", self.model)
+
+
+class Car(Vehicle):
+    def __init__(self, brand, model, doors):
+        super().__init__(brand, model)
+        self.doors = doors
+
+    def display(self):
+        print("Car Information")
+        print("Brand:", self.brand)
+
+        print("Model:", self.model)
+        print("Doors:", self.doors)
+        print()
+
+
+class Bike(Vehicle):
+    def __init__(self, brand, model, engine_cc):
+
+        super().__init__(brand, model)
+        self.engine_cc = engine_cc
+
+    def display(self):
+        print("Bike Information")
+        print("Brand:", self.brand)
+
+        print("Model:", self.model)
+        print("Engine:", self.engine_cc, "cc")
+        print()
+
+
+car = Car("Toyota", "Corolla", 4)
+bike = Bike("Honda", "CBR", 150)
+
+car.display()
+bike.display()
